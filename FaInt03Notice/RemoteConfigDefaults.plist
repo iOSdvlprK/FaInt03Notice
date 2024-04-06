@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>isHidden</key>
+	<true/>
+	<key>title</key>
+	<string>Information awaits you.</string>
+	<key>detail</key>
+	<string>Please keep this in mind when using the service.</string>
+	<key>date</key>
+	<string>Monday, January 31, 2024 00:00-03:00 (3 hours)</string>
+</dict>
+</plist>

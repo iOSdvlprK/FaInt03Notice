@@ -43,6 +43,7 @@
 		D88A7B712BC19135008DC400 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D88A7B702BC19135008DC400 /* FirebaseRemoteConfigSwift */; };
 		D88A7B732BC19135008DC400 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D88A7B722BC19135008DC400 /* FirebaseStorage */; };
 		D88A7B752BC19135008DC400 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = D88A7B742BC19135008DC400 /* FirebaseStorageCombine-Community */; };
+		D88A7B772BC19892008DC400 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = D88A7B762BC19892008DC400 /* RemoteConfigDefaults.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		D80605702BC02B4A000B8894 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
 		D80605712BC02B4A000B8894 /* NoticeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeViewController.xib; sourceTree = "<group>"; };
 		D88A7B3D2BC18D7F008DC400 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D88A7B762BC19892008DC400 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				D806055C2BC0293E000B8894 /* AppDelegate.swift */,
 				D806055E2BC0293E000B8894 /* SceneDelegate.swift */,
 				D80605602BC0293E000B8894 /* ViewController.swift */,
+				D88A7B762BC19892008DC400 /* RemoteConfigDefaults.plist */,
 				D80605622BC0293E000B8894 /* Main.storyboard */,
 				D80605702BC02B4A000B8894 /* NoticeViewController.swift */,
 				D80605712BC02B4A000B8894 /* NoticeViewController.xib */,
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88A7B772BC19892008DC400 /* RemoteConfigDefaults.plist in Resources */,
 				D80605692BC02941000B8894 /* LaunchScreen.storyboard in Resources */,
 				D80605662BC02941000B8894 /* Assets.xcassets in Resources */,
 				D88A7B3E2BC18D7F008DC400 /* GoogleService-Info.plist in Resources */,
