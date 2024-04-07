@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseRemoteConfig
+import FirebaseAnalytics
 
 class ViewController: UIViewController {
     var remoteConfig: RemoteConfig?
@@ -56,11 +57,41 @@ extension ViewController {
                 
                 noticeVC.noticeContents = (title: title, detail: detail, date: date)
                 self.present(noticeVC, animated: true)
+            } else {
+                self.showEventAlert()
             }
         }
     }
     
     func isNoticeHidden(_ remoteConfig: RemoteConfig) -> Bool {
         return remoteConfig["isHidden"].boolValue
+    }
+}
+
+// A/B Testing
+extension ViewController {
+    func showEventAlert() {
+        guard let remoteConfig = remoteConfig else { return }
+        
+        remoteConfig.fetch { [weak self] status, _ in
+            if status == .success {
+                remoteConfig.activate(completion: nil)
+            } else {
+                print("Config not fetched")
+            }
+            
+            let message = remoteConfig["message"].stringValue ?? ""
+            let confirmAction = UIAlertAction(title: "Confirm", style: .default) { _ in
+                // record the event on Google Analytics
+                Analytics.logEvent("promotion_alert", parameters: nil)
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let alertController = UIAlertController(title: "Surprise Event", message: message, preferredStyle: .alert)
+            
+            alertController.addAction(confirmAction)
+            alertController.addAction(cancelAction)
+            
+            self?.present(alertController, animated: true)
+        }
     }
 }
